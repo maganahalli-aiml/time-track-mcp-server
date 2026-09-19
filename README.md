@@ -11,7 +11,7 @@ AI assistant, and both see the exact same data.
 4. `uv run fastmcp version` — confirm the install
 5. This repo's `database.py`, `main.py`, and `static/` are already written for you
 6. `uv run uvicorn main:app --reload`
-7. Visit `http://127.0.0.1:8000` (website) and `http://127.0.0.1:8000/mcp` (MCP)
+7. Visit `http://127.0.0.1:8000` (website) and `http://127.0.0.1:8000/mcp/` (MCP)
 8. Connect Claude Desktop (see below)
 9. Deploy to Prefect Horizon for a public URL (see below)
 
@@ -31,7 +31,7 @@ AI assistant, and both see the exact same data.
 ```json
 {
   "mcpServers": {
-    "timetrack": { "url": "http://127.0.0.1:8000/mcp" }
+    "timetrack": { "url": "http://127.0.0.1:8000/mcp/" }
   }
 }
 ```
@@ -52,7 +52,7 @@ before writing this. Free for personal projects.
 2. Sign in to [Prefect Horizon](https://gofastmcp.com/v2/deployment/fastmcp-cloud) with GitHub
 3. Connect the repo — dependencies auto-detected from `pyproject.toml`
 4. Optionally verify first: `fastmcp inspect main.py:mcp`
-5. Deploy — live at `https://your-project-name.fastmcp.app/mcp`
+5. Deploy — live at `https://your-project-name.fastmcp.app/mcp/`
 
 Worth confirming directly whether the website's static routes come along with
 the deployment — Horizon is purpose-built for the MCP piece specifically. If
